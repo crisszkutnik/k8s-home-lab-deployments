@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2024-06-19T03:00:02Z"
+  generation: 1
+  labels:
+    app: hello-node
+  name: hello-node
+  namespace: default
+  resourceVersion: "13462757"
+  uid: 99656607-1761-47a3-8622-c8782e9beda8
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: hello-node
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hello-node
+    spec:
+      containers:
+        - command:
+            - /agnhost
+            - netexec
+            - --http-port=8080
+          image: registry.k8s.io/e2e-test-images/agnhost:2.39
+          imagePullPolicy: IfNotPresent
+          name: agnhost
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
