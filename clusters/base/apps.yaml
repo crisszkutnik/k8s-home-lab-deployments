@@ -6,7 +6,7 @@ metadata:
 spec:
   timeout: 5m0s
   interval: 10m0s
-  path: ./cluster/apps
+  path: ./clusters/apps
   prune: true
   retryInterval: 2m0s
   sourceRef:
