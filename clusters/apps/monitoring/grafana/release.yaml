@@ -15,10 +15,10 @@ spec:
         namespace: flux-system
   values:
     grafana.ini:
-    server:
-      domain: hello-word.example
-      root_url: http://hello-world.example/grafana
-      serve_from_sub_path: true
+      server:
+        domain: hello-word.example
+        root_url: http://hello-world.example/grafana
+        serve_from_sub_path: true
     service:
       type: NodePort
       nodePort: 30001
