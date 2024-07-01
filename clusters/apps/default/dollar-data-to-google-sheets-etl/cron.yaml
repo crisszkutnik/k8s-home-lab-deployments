@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: dollar-data-to-google-sheets-etl-cronjob
+  namespace: default
 spec:
   schedule: "0 18 * * *"
   successfulJobsHistoryLimit: 3
