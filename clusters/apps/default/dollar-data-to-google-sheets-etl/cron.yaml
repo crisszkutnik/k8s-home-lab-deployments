@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: dollar-data-to-google-sheets-etl-cronjob
+spec:
+  schedule: "0 18 * * *"
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  timeZone: "America/Argentina/Buenos_Aires"
+  jobTemplate:
+    spec:
+      ttlSecondsAfterFinished: 259200
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: dollar-data-to-google-spreadsheets-etl
+              image: ghcr.io/crisszkutnik/dollar-data-to-google-spreadsheets-etl:latest
+              imagePullPolicy: Always
+              env:
+                - name: SHEET_ID
+                  valueFrom:
+                    secretKeyRef:
+                      name: dollar-data-to-google-spreadsheets-etl-configmap
+                      key: SHEET_ID
+                - name: SERVICE_ACCOUNT_EMAIL
+                  valueFrom:
+                    secretKeyRef:
+                      name: dollar-data-to-google-spreadsheets-etl-configmap
+                      key: SERVICE_ACCOUNT_EMAIL
+                - name: SERVICE_ACCOUNT_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: dollar-data-to-google-spreadsheets-etl-configmap
+                      key: SERVICE_ACCOUNT_KEY
+                - name: KEY_BASE64
+                  value: "true"
