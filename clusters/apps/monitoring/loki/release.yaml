@@ -23,12 +23,12 @@ spec:
         type: "filesystem"
       storage_config:
         filesystem:
-          directory: /data/loki/
+          directory: /var/loki/
         tsdb_shipper:
-          active_index_directory: /data/tsdb-index
-          cache_location: /data/tsdb-cache
+          active_index_directory: /var/loki/tsdb-index
+          cache_location: /var/loki/tsdb-cache
       compactor:
-        working_directory: /data/loki/compactor
+        working_directory: /var/loki/compactor
         retention_enabled: true
         retention_delete_delay: 2h
         delete_request_cancel_period: 72h
