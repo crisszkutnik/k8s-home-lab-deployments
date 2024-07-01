@@ -31,10 +31,10 @@ spec:
         retention_period: 72h
       schemaConfig:
         configs:
-          - from: 2020-10-24
+          - from: "2024-01-01"
             store: boltdb-shipper
             object_store: filesystem
-            schema: v12
+            schema: v13
             index:
               prefix: index_
               period: 24h
