@@ -22,17 +22,17 @@ spec:
                 - name: SHEET_ID
                   valueFrom:
                     secretKeyRef:
-                      name: dollar-data-to-google-spreadsheets-etl-configmap
+                      name: dollar-data-to-google-spreadsheets-etl-secret
                       key: SHEET_ID
                 - name: SERVICE_ACCOUNT_EMAIL
                   valueFrom:
                     secretKeyRef:
-                      name: dollar-data-to-google-spreadsheets-etl-configmap
+                      name: dollar-data-to-google-spreadsheets-etl-secret
                       key: SERVICE_ACCOUNT_EMAIL
                 - name: SERVICE_ACCOUNT_KEY
                   valueFrom:
                     secretKeyRef:
-                      name: dollar-data-to-google-spreadsheets-etl-configmap
+                      name: dollar-data-to-google-spreadsheets-etl-secret
                       key: SERVICE_ACCOUNT_KEY
                 - name: KEY_BASE64
                   value: "true"
