@@ -21,8 +21,14 @@ spec:
         replication_factor: 1
       storage:
         type: "filesystem"
+      storage_config:
+        filesystem:
+          directory: /data/loki/
+        tsdb_shipper:
+          active_index_directory: /data/tsdb-index
+          cache_location: /data/tsdb-cache
       compactor:
-        working_directory: /tmp/loki/compactor
+        working_directory: /data/loki/compactor
         retention_enabled: true
         retention_delete_delay: 2h
         delete_request_cancel_period: 72h
