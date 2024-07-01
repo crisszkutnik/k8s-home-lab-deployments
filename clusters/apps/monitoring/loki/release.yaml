@@ -16,11 +16,11 @@ spec:
   values:
     deploymentMode: SimpleScalable
     backend:
-        replicas: 1
-      write:
-        replicas: 1
-      read:
-        replicas: 1
+      replicas: 1
+    write:
+      replicas: 1
+    read:
+      replicas: 1
     loki:
       auth_enabled: false
       storage:
