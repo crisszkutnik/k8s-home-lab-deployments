@@ -35,4 +35,4 @@ spec:
                       name: dollar-data-to-google-spreadsheets-etl-secret
                       key: SERVICE_ACCOUNT_KEY
                 - name: KEY_BASE64
-                  value: "false"
+                  value: "true"
