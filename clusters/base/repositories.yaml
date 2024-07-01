@@ -4,12 +4,10 @@ metadata:
   name: repositories
   namespace: flux-system
 spec:
-  timeout: 5m0s
-  interval: 10m0s
+  interval: 30m
   path: ./clusters/repositories
   prune: true
-  retryInterval: 2m0s
+  wait: true
   sourceRef:
     kind: GitRepository
     name: flux-system
-  wait: true
