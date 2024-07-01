@@ -25,10 +25,10 @@ spec:
         working_directory: /tmp/loki/compactor
         retention_enabled: true
         retention_delete_delay: 2h
-        deletion_mode: filter-and-delete
         delete_request_cancel_period: 72h
       limits_config:
         retention_period: 72h
+        deletion_mode: filter-and-delete
       schemaConfig:
         configs:
           - from: "2024-01-01"
