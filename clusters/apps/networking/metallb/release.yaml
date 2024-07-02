@@ -12,3 +12,6 @@ spec:
         kind: HelmRepository
         name: metallb-charts
         namespace: flux-system
+  values:
+    crds:
+      enabled: true
