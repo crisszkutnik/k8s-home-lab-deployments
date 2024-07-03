@@ -1,17 +1,17 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: config
-  namespace: flux-system
-spec:
-  timeout: 5m0s
-  interval: 10m0s
-  path: ./clusters/config
-  prune: true
-  wait: true
-  dependsOn:
-    - name: apps
-    - name: repositories
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
+# apiVersion: kustomize.toolkit.fluxcd.io/v1
+# kind: Kustomization
+# metadata:
+#   name: config
+#   namespace: flux-system
+# spec:
+#   timeout: 5m0s
+#   interval: 10m0s
+#   path: ./clusters/config
+#   prune: true
+#   wait: true
+#   dependsOn:
+#     - name: apps
+#     - name: repositories
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
