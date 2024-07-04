@@ -19,8 +19,8 @@
     "ignorePaths": [
       "clusters/base",
       "clusters/repositories",
-      "release\\.yaml$",
-      "kustomization\\.yaml$"
+      "clusters/.*release\\.ya?ml$",
+      "clusters/.*kustomization\\.ya?ml$"
     ]
   }
 }
