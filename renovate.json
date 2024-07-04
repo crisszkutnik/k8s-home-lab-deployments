@@ -15,7 +15,10 @@
       "clusters/.+\\.yaml$"
     ],
     "ignorePaths": [
-      "clusters/base/flux-system/gotk-components.yaml"
+      "clusters/base",
+      "clusters/repositories",
+      "clusters/.+/release\\.yaml$",
+      "clusters/.+/kustomization\\.yaml$"
     ]
   }
 }
