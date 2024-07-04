@@ -7,7 +7,7 @@
   "timezone": "America/Argentina/Buenos_Aires",
   "flux": {
     "fileMatch": [
-      "cluster/.+\\.yaml$"
+      "clusters/.+\\.yaml$"
     ]
   }
 }
