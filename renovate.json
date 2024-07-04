@@ -9,5 +9,13 @@
     "fileMatch": [
       "clusters/.+\\.yaml$"
     ]
+  },
+  "kubernetes": {
+    "fileMatch": [
+      "clusters/.+\\.yaml$"
+    ],
+    "ignorePaths": [
+      "clusters/base/flux-system/gotk-components.yaml"
+    ]
   }
 }
