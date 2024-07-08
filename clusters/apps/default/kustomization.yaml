@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - dollar-data-to-google-sheets-etl
   - hello-node
+  - discord-notifier
