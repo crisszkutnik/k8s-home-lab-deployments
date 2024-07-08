@@ -16,8 +16,8 @@ spec:
           restartPolicy: OnFailure
           containers:
             - name: dollar-data-to-google-spreadsheets-etl
-              image: ghcr.io/crisszkutnik/dollar-data-to-google-spreadsheets-etl:latest
-              imagePullPolicy: Always
+              image: ghcr.io/crisszkutnik/dollar-data-to-google-spreadsheets-etl:1.0.0
+              imagePullPolicy: IfNotPresent
               env:
                 - name: SHEET_ID
                   valueFrom:
