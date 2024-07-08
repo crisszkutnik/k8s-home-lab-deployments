@@ -14,7 +14,7 @@ spec:
         app: discord-notifier-pod
     spec:
       containers:
-        - image: ghcr.io/crisszkutnik/discord-notifier:1.0.0
+        - image: ghcr.io/crisszkutnik/discord-notifier:1.1.0
           imagePullPolicy: IfNotPresent
           name: discord-notifier-container
           resources:
