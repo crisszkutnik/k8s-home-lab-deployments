@@ -5,8 +5,16 @@
   </div>
 </div>
 
-![GitHub last commit](https://img.shields.io/github/last-commit/crisszkutnik/k8s-home-lab-deployments)
-![Renovate enabled](https://img.shields.io/badge/Renovate-Enabled-brightgreen)
+<br />
+
+<div align="center">
+  
+  ![GitHub last commit](https://img.shields.io/github/last-commit/crisszkutnik/k8s-home-lab-deployments)
+  [![Renovate enabled](https://img.shields.io/badge/Renovate-Enabled-brightgreen)](https://github.com/renovatebot/renovate)
+  [![K3s](https://img.shields.io/badge/K3s-gold)](https://k3s.io/)
+  
+</div>
+
 
 ---
 ## :book:&nbsp; Overview
