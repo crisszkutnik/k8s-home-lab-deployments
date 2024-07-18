@@ -22,12 +22,6 @@ spec:
         replication_factor: 1
       storage:
         type: "filesystem"
-      storage_config:
-        filesystem:
-          directory: /var/loki/
-        tsdb_shipper:
-          active_index_directory: /var/loki/tsdb-index
-          cache_location: /var/loki/tsdb-cache
       compactor:
         working_directory: /var/loki/compactor
         retention_enabled: true
