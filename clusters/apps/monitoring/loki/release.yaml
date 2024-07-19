@@ -15,10 +15,15 @@ spec:
         name: grafana-charts
         namespace: flux-system
   values:
+    # Disable chunck cache and results cache as Orange Pi does not have
+    # enough RAM to handle caching
     deploymentMode: SingleBinary
+    chunksCache:
+      enabled: false
+    resultsCache:
+      enabled: false
     loki:
       auth_enabled: false
-      # Orange Pi does not have enough RAM to handle memory caching
       memcached:
         chunk_cache:
           enabled: false
