@@ -18,6 +18,12 @@ spec:
     deploymentMode: SingleBinary
     loki:
       auth_enabled: false
+      # Orange Pi does not have enough RAM to handle memory caching
+      memcached:
+        chunk_cache:
+          enabled: false
+        results_cache:
+          enabled: false
       commonConfig:
         replication_factor: 1
       storage:
