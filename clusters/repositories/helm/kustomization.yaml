@@ -4,3 +4,4 @@ resources:
   - metallb-charts.yaml
   - ingress-nginx-charts.yaml
   - grafana-charts.yaml
+  - prometheus-charts.yaml
