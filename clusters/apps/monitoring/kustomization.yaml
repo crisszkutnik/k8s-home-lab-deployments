@@ -4,4 +4,3 @@ resources:
   - grafana
   - loki
   - promtail
-  - prometheus
