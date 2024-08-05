@@ -15,9 +15,9 @@
   
 </div>
 
-
 ---
-## :book:&nbsp; Overview
+
+## 📖 Overview
 
 This is the repository for my on-premise Kubernetes cluster that runs in my house. It uses GitOps techniques in order to keep the content of this repository in-sync with the cluster. Basic stuff is:
 
@@ -35,5 +35,35 @@ The cluster runs a variety of applications for setup and management such as:
 - [Loki](https://grafana.com/oss/loki/) and [Promtail](https://grafana.com/docs/loki/latest/send-data/promtail/) for log collection
 - [MetalLB](https://metallb.universe.tf/) as load balancer via L2 advertisement
 - [NGINX ingress controller](https://docs.nginx.com/nginx-ingress-controller/) is used as an ingress controller
+- [Prometheus](https://prometheus-operator.dev/) for metrics and monitoring
+- [1Password operator](https://developer.1password.com/docs/k8s/k8s-integrations/) for secret management and automatic redeployment on secret update
 
 It also runs a bunch of other applications that were developed for personal use
+
+## 🔧 Hardware
+
+Not much to add here yet. Hopefully I'll be able to add stuff here eventually
+
+| Device     | Count | CPU            | RAM  | Disk size | OS     | Purpose       |
+| ---------- | ----- | -------------- | ---- | --------- | ------ | ------------- |
+| OrangePi 5 | 1     | RK3588S 8-core | 4 GB | 64 GB     | Ubuntu | Control plane |
+| OrangePi 5 | 2     | RK3588S 8-core | 4 GB | 64 GB     | Ubuntu | Worker        |
+
+## IPs and networking
+
+### Reserved IP spaces on my local network
+
+| Host                  | Address                       |
+| --------------------- | ----------------------------- |
+| DHCP                  | 192.168.0.10 - 192.168.0.189  |
+| K8s load balancer IPs | 192.168.0.190 - 192.168.0.199 |
+| Master nodes          | 192.168.0.200 - 192.168.0.210 |
+| Nodes                 | 192.168.0.211 - 192.168.1.254 |
+
+#### Nodes IPs
+
+| Host                 | Address       |
+| -------------------- | ------------- |
+| Control plane node 1 | 192.168.0.200 |
+| Worker node 1        | 192.168.0.211 |
+| Worker node 2        | 192.168.0.212 |
